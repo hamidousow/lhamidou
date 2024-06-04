@@ -44,6 +44,7 @@
     </nav>
   
     <NuxtPage/>
+    <Footer />
 
   </div>
  

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="container">
+    <div class="container pb-160">
         <div class="gv-5 isotope-grid mb-n7 row">
             <Card />            
         </div>
@@ -12,5 +12,9 @@
 
 
 <style>
+
+    .pb-160 {
+        padding-bottom: 160px;
+    }
 
 </style>
