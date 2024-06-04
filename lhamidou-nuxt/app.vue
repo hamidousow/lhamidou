@@ -7,13 +7,15 @@
     { label: 'Redirect', to: '/redirect' },
   ]
 
+  
+
   const route = useRoute()
 </script>
 
 <template>
   <div class="bg-body-tertiary">  
     <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
+      <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
