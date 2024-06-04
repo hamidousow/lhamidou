@@ -17,7 +17,8 @@
                         
                         <img class="position-relative rounded-circle aos-init aos-animate" width="180" src="~/assets/images/avatar-freelancer.png" alt="" data-aos="fade">
                     </div>
-                </div>                     
+                </div>  
+                <div class="d-none d-lg-block col order-lg-2"></div>                   
                 <div class="col-12 col-lg-2 text-center text-lg-end order-2 order-lg-4 mt-n60 mt-lg-0 col">
                     <ul class="nav nav-gap-sm d-inline-flex align-items-center flex-lg-column">
                         <li class="nav-item">
@@ -73,6 +74,12 @@
         .pt-100 {
             padding-top: 100px;
         } 
+    }
+
+    @media (min-width: 1024px) {
+        .d-lg-block {
+            display: block !important;
+        }
     }
 
 </style>
