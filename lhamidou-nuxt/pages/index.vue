@@ -5,6 +5,7 @@
 
 <template>    
     <Hero />
+    <GridCards />
     
 </template>
 
