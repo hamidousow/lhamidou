@@ -6,14 +6,15 @@
     <div class="container">
         <div class="pt-60 pb-130 mt-30">
             <div class="gh-1 gv-5 align-items-center justify-content-center text-center text-lg-start row">
-                <div class="col-auto order-1 order-lg-3 col">
+                <div class="col-auto order-1 order-lg-3 col ps-30">
                     <div class="shape-parent lines-style-2">
                         <div class="line text-dark"></div>
                         <div class="shape mt-n30 ms-n30 me-100 me-lg-0 d-block">
                             <svg data-rellax-speed="-1" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="45" cy="45" r="45" fill="#F5F5F5"></circle>
+                                <circle cx="45" cy="45" r="45" fill="#eeeeee"></circle>
                             </svg>
                         </div>
+                        
                         <img class="position-relative rounded-circle aos-init aos-animate" width="180" src="~/assets/images/avatar-freelancer.png" alt="" data-aos="fade">
                     </div>
                 </div>                     
@@ -21,7 +22,8 @@
                     <ul class="nav nav-gap-sm d-inline-flex align-items-center flex-lg-column">
                         <li class="nav-item">
                             <a data-aos="fade-up" class="nav-link aos-init aos-animate" href="//facebook.com/runwebrun">
-                                <svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor"></path>
+                                <svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor"></path>
                                 </svg>
                             </a>
                         </li>
@@ -44,6 +46,25 @@
     </div>
 </template>
 
-<style>
+<style scoped>
+    .shape-parent {
+        position: relative;
+        z-index: 0;
+    }
+    .shape {
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 100px;
+        top: 0;
+    }
+
+    .pt-100 {
+        padding-top: 100px;
+    } 
+    .ps-30 {
+        padding-left: 30px;
+    }
 
 </style>
