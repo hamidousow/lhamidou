@@ -6,7 +6,7 @@
     <div class="container">
         <div class="pt-60 pb-130 mt-30">
             <div class="gh-1 gv-5 align-items-center justify-content-center text-center text-lg-start row">
-                <div class="col-auto order-1 order-lg-3 col ps-30">
+                <div class="col-auto order-1 order-lg-3 col ps-30 pt-100">
                     <div class="shape-parent lines-style-2">
                         <div class="line text-dark"></div>
                         <div class="shape mt-n30 ms-n30 me-100 me-lg-0 d-block">
@@ -61,10 +61,18 @@
     }
 
     .pt-100 {
-        padding-top: 100px;
+        padding-top: inherit;
     } 
+
+    
     .ps-30 {
         padding-left: 30px;
+    }
+
+    @media screen and (max-width: 992px) {
+        .pt-100 {
+            padding-top: 100px;
+        } 
     }
 
 </style>
