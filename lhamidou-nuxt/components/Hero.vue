@@ -37,8 +37,7 @@
                 <div class="freelance-details col-12 col-lg-6 order-3 order-lg-1 col">
                     <p class="subtitle aos-init aos-animate" data-aos="fade-up">Hamidou SOW</p>
                     <h1 class="h2 aos-init aos-animate" data-aos="fade-up">I’m freelance product designer based in LA.</h1>
-                    <a data-aos="fade-up" class="btn btn-dark btn-with-ball mt-5 aos-init aos-animate" href="/themebau/react/contact1">let’s work <span class="btn-ball" style="transform: translateY(0px);"></span>
-                    </a>
+                    <NuxtLink data-aos="fade-up" class="btn btn-dark btn-with-ball mt-5 aos-init aos-animate" to="/contact">let’s work </NuxtLink>
                 </div>
             </div> 
         </div>
