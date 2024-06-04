@@ -4,7 +4,7 @@
 </script>
 
 <template>    
-    index          
+    <Hero />
     
 </template>
 
