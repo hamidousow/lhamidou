@@ -7,14 +7,6 @@
 
         <footer class="footer bg-dark text-white shape-parent overflow-hidden text-center pt-160 pb-60" id="footer">
             <div class="pt-4 container">
-                <ul class="nav align-items-center flex-column text-white mb-100">
-                    <li class="nav-item"><a class="nav-link h2 mb-8 mb-md-30 d-none d-md-flex"
-                            href="mailto:hello@themebau.com?subject=Test%20Address%20Email">hello@themebau.com</a><a
-                            class="nav-link h4 mb-8 mb-md-30 d-md-none"
-                            href="mailto:hello@themebau.com?subject=Test%20Address%20Email">hello@themebau.com</a></li>
-                    <li class="nav-item"><a class="nav-link h4 mt-8 mt-md-0" href="callto:+1 202-358-0309">+1 202-358-0309</a>
-                    </li>
-                </ul>
                 <ul class="nav nav-social nav-gap-sm align-items-center justify-content-center mb-30 text-white">                
                     <li class="nav-item">
                         <a class="nav-link" href="//instagram.com/runwebrun">
