@@ -53,11 +53,8 @@
 <style>
   .body-content {
     position: relative;
-    min-height: 100dvh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
-
-  /* .mt-100 {
-    margin-top: 100px;
-  } */
-
 </style>
