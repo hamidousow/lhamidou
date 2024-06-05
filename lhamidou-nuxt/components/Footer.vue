@@ -24,6 +24,11 @@
 
 </template>
 
-<style>
+<style scoped>
+
+    .footer {
+        margin-top: auto;
+        width: 100%;
+    }
 
 </style>

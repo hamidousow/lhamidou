@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <div class="bg-body-tertiary">  
+  <div class="bg-body-tertiary body-content">  
     <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
       <div class="container">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -42,14 +42,22 @@
         </div>
       </div>
     </nav>
-  
-    <NuxtPage/>
+    <main class="mt-auto">
+      <NuxtPage/>
+    </main>    
     <Footer />
-
   </div>
  
 </template>
 
 <style>
+  .body-content {
+    position: relative;
+    min-height: 100dvh;
+  }
+
+  /* .mt-100 {
+    margin-top: 100px;
+  } */
 
 </style>
