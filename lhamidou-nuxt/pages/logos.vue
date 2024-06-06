@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 
+const props = defineProps(["project"])
+
 </script>
 
 <template>
-    <div class="container mt-100"> logos </div>
+    
 </template>
 
 <style>

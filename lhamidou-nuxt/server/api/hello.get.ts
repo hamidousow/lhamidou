@@ -1,9 +1,4 @@
-import { useFetch } from "nuxt/app";
-import path from "path";
-
 import "dotenv/config"
-
-
 import { createClient } from '@supabase/supabase-js'
 
 // Create a single supabase client for interacting with your database
@@ -18,7 +13,9 @@ export default defineEventHandler(async () => {
 
     if(error) {
         console.log(error);        
-    }   
+    }
+    
+    console.log(data);
         
     return data
     

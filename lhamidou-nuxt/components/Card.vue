@@ -6,8 +6,7 @@
 
 <template>
     <span class="d-block">
-            <a class="card card-portfolio card-default card-image-md card-hover-zoom"
-                href="/themebau/react/portfolio-single-style-1">
+            <a class="card card-portfolio card-default card-image-md card-hover-zoom" href="/projects/1">
                 <span class="card-img rounded-0" data-cursor-style="cursor-circle" data-cursor-text="view">
                     <img src="~/assets/images/africarobase-img-1.jpg" alt="" data-aos="fade-up"
                         class="aos-init aos-animate">
