@@ -11,18 +11,15 @@ const supabase = createClient('https://rixvljmmardnbdlbrflp.supabase.co', `${pro
 
 
 export default defineEventHandler(async () => {
-    const { data, error } = await supabase
+
+    const { data, error } = await supabase    
     .from('t_project')
     .select()
 
     if(error) {
         console.log(error);        
-    }
-
-    console.log(data);
+    }   
+        
+    return data
     
-
-    return {
-        hello: 'world'
-    }
 })
