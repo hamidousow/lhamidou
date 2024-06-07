@@ -2,7 +2,7 @@
 import Card from './Card.vue';
 
 
-const { data } = await useFetch('/api/hello')
+const data = await $fetch('/api/hello')
 
 
 </script>

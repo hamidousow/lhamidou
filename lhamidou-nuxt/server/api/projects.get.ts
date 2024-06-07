@@ -18,6 +18,6 @@ export default defineEventHandler(async (event) => {
     if(error) {
         console.log(error);        
     }   
-    console.log(data?.pro_client)
+    
     return data
 })
