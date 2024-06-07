@@ -9,7 +9,7 @@ export default defineEventHandler(async () => {
 
     const { data, error } = await supabase    
     .from('t_project')
-    .select()
+    .select();
 
     if(error) {
         console.log(error);        

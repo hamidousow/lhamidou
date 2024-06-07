@@ -1,7 +1,5 @@
 <script setup lang="ts">
   import '~/assets/stylesheets/styles.css'
-
-  const route = useRoute()
 </script>
 
 <template>
