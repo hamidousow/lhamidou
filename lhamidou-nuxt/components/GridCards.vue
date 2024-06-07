@@ -1,17 +1,13 @@
 <script lang="ts" setup>
-import type { RefSymbol } from '@vue/reactivity';
 import Card from './Card.vue';
 import { useProjectsStore } from '~/stores/projectStore';
-// import { storeRefs } from 'pinia';
 
     const data = await $fetch('/api/all-projects');
     const projectsStore =  useProjectsStore();
     const res = storeToRefs(projectsStore);
 
     onMounted(() => {
-        projectsStore.getAllProjects
-        console.log(res.projects.value);
-        
+        projectsStore.getAllProjects        
     })
 </script>
 

@@ -1,12 +1,14 @@
 <script lang="ts" setup>
 
-    const props = defineProps(['project'])
+    const props = defineProps(['project']);
 
 </script>
 
 <template>
     <span class="d-block">
-            <a class="card card-portfolio card-default card-image-md card-hover-zoom" href="/projects/1">
+            <NuxtLink class="card card-portfolio card-default card-image-md card-hover-zoom" 
+                :to="{ name: 'projects-id',  params: { id: props.project.pro_id}}"
+            >
                 <span class="card-img rounded-0" data-cursor-style="cursor-circle" data-cursor-text="view">
                     <img src="~/assets/images/africarobase-img-1.jpg" alt="" data-aos="fade-up"
                         class="aos-init aos-animate">
@@ -15,7 +17,7 @@
                     <span class="card-title h4">{{ props.project.pro_name }}</span>
                     <span class="card-category subtitle" v-for="category in props.project.pro_category">{{ category }}</span>
                 </span>
-            </a>
+            </NuxtLink>
     </span>
 </template>
 
