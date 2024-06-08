@@ -15,27 +15,24 @@ export default defineEventHandler(async (event) => {
         .eq('pro_id', query.id)
         .single()
 
-    if(data != null) {
-        data.pro_images = getMultiplesImagesUrl(data.pro_images)
-        console.log("images : ", data.pro_images);
-    }    
-
     if(error) {
         console.log(error);   
         return     
-    }   
+    } 
+
+    if(data != null) {
+        data.pro_images = getMultiplesImagesUrl(data.pro_images)
+    }      
     
     return data
 })
 
 function getMultiplesImagesUrl(imagesNamesArray: string[]) {
     const imagesArray: string[] = [];
-    let imageUrl!: string 
 
     try {
-        imagesNamesArray.forEach((imgName: string) => {
-            imageUrl = getImageUrl('lhamidou_projects_images', imgName)
-            imagesArray.push(imageUrl)
+        imagesNamesArray.forEach((imgName: string) => {            
+            imagesArray.push(getImageUrl('lhamidou_projects_images', imgName))
         })
     } catch(error) {
         console.log("une erreur est survenue : ", error);
