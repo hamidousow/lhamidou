@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { 
+    enabled: true 
+  },
+  spaLoadingTemplate: false,
   modules: [
     "@nuxt/eslint",
     '@pinia/nuxt',
@@ -31,5 +34,5 @@ export default defineNuxtConfig({
       ]
     }
   },
-  spaLoadingTemplate: false
+  
 })

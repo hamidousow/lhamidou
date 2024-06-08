@@ -5,7 +5,7 @@ const props = defineProps(["project"])
 </script>
 
 <template>
-    
+    <div class="mt-auto">logos</div>
 </template>
 
 <style>
