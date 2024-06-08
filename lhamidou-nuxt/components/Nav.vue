@@ -1,5 +1,9 @@
+<script lang="ts" setup>
+
+</script>
+
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
             <NuxtLink class="navbar-brand" to="/">Navbar</NuxtLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -26,9 +30,7 @@
     </nav>
 </template>
 
-<script lang="ts" setup>
 
-</script>
 
 <style>
 

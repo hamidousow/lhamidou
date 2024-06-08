@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import '~/assets/stylesheets/styles.css';
+  import { createClient } from '@supabase/supabase-js';
+import '~/assets/stylesheets/styles.css';
 
   const layout = "default";
 
