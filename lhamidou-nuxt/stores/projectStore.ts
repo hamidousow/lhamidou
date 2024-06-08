@@ -15,7 +15,7 @@ export const useProjectsStore = defineStore("projects", () => {
         loading.value = true;
         try {            
             const data = await $fetch('/api/all-projects');
-            projects.value = data
+            projects.value =  data as any[]
         } catch(error) {
             console.log(error);            
         } finally {
