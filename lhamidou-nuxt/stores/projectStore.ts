@@ -1,43 +1,27 @@
 import { defineStore } from "pinia";
 
-export const useProjectsStore = defineStore("projects", {
-
-    state: () => ({
-        projects: <any[]>[]
-    }),
-
-    getters: {
-        async getAllProjects(state) { 
-            try{
-                const res = await $fetch('/api/all-projects')
-                return state.projects.push(res)
-            } 
-            catch(error) {
-                console.log(error);
-            }
-        }
-    }
-
+export const useProjectsStore = defineStore("projects", () => {
 
     //ref()s become state properties
-    /*const project = ref(null)
-    const projects = ref<any[]>([])*/
+    const project = ref()
+    const projects = ref<any[]>([])
+    const loading = ref(false);
 
     //computed()s become getters
 
 
     //actions
-   /* async function getAllProjects() {
-        try {
+   async function getAllProjects() {
+        loading.value = true;
+        try {            
             const data = await $fetch('/api/all-projects');
-            projects.value.push(data);            
+            projects.value = data
         } catch(error) {
             console.log(error);            
-        }        
-    }*/
+        } finally {
+            loading.value = false;
+        }    
+    }
 
-    
-
-
-    //return { projects, project, getAllProjects }
+    return { projects, project, loading, getAllProjects }
 })
