@@ -1,7 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  modules: ["@nuxt/eslint"],
+  devtools: { 
+    enabled: true 
+  },
+  spaLoadingTemplate: false,
+  modules: [
+    "@nuxt/eslint",
+    '@pinia/nuxt',
+  ],
+  pinia: {
+    storesDirs: ['./stores/**']
+  },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false
+    }
+  ],
   css: ['~/assets/stylesheets/styles.css'],
   app: {
     head: {
@@ -18,5 +33,6 @@ export default defineNuxtConfig({
         }
       ]
     }
-  }
+  },
+  
 })

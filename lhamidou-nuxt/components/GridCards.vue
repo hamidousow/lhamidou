@@ -1,16 +1,23 @@
 <script lang="ts" setup>
 import Card from './Card.vue';
+import { useProjectsStore } from '~/stores/projectStore';
 
+    const projectsStore =  useProjectsStore();
+    const projects = computed(() => projectsStore.projects)
+    const loading = computed(() => projectsStore.loading)
 
-const { data } = await useFetch('/api/hello')
-
-
+    onMounted(() => {
+        projectsStore.getAllProjects()
+    })
 </script>
 
 <template>
     <div class="container pb-160">
-        <div data-filters="branding" class="branding col-12 isotope-item col-md-6 pt-100 px-0" v-for="project in data">
-            <Card v-bind:project="project" :key="project.pro_id"/>
+        <div class="d-block" v-if="loading">...Loading projects</div>
+        <div class="cards d-flex">
+            <div class="branding col-12 isotope-item col-md-6 pt-100 px-0" v-for="project in projects">
+                <Card v-bind:project="project" :key="project.pro_id"/>
+            </div>
         </div>
     </div>
 </template>

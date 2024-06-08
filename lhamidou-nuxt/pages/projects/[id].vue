@@ -81,20 +81,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col">
+            <!-- <div class="col-12 col" >
                 <div to="" class="gallery-item gallery-item-sm aos-init aos-animate" data-fancybox="gallery-1"
                     data-aos="fade">
                     <img src="" alt="">
                 </div>
-            </div>
+            </div> -->
             <div class="col-12 col-sm-6">
-                <div to="" class="gallery-item gallery-item-md aos-init" data-fancybox="gallery-1" data-aos="fade">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="col-12 col-sm-6">
-                <div to="" class="gallery-item gallery-item-md aos-init" data-fancybox="gallery-1" data-aos="fade">
-                    <img src="" alt="">
+                <div
+                    v-for="imageUrl in project?.pro_images"
+                    class="gallery-item gallery-item-md aos-init" 
+                    data-fancybox="gallery-1" 
+                    data-aos="fade">
+                    <img v-bind:src="imageUrl" alt="">
                 </div>
             </div>
         </div>
