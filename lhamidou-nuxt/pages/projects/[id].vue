@@ -3,7 +3,7 @@
     const $route = useRoute()
     const id = $route.params.id
 
-    const project = await $fetch('/api/projects', { params : { id: id }})
+    const project = await $fetch('/api/project', { params : { id: id }})
 
 </script>
 

@@ -10,7 +10,7 @@
                 :to="{ name: 'projects-id',  params: { id: props.project.pro_id}}"
             >
                 <span class="card-img rounded-0" data-cursor-style="cursor-circle" data-cursor-text="view">
-                    <img src="~/assets/images/africarobase-img-1.jpg" alt="" data-aos="fade-up"
+                    <img :src="props.project.pro_cover" alt="" data-aos="fade-up"
                         class="aos-init aos-animate">
                 </span>
                 <span class="card-body">
