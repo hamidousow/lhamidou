@@ -129,4 +129,8 @@
 
 <style>
 
+    .gallery-item img {
+        width: 100%;
+    }
+
 </style>

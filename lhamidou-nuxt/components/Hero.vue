@@ -39,7 +39,7 @@
                 </div>
                 <div class="freelance-details col-12 col-lg-6 order-3 order-lg-1 col">
                     <p class="subtitle aos-init aos-animate" data-aos="fade-up">Hamidou SOW</p>
-                    <h1 class="h2 aos-init aos-animate" data-aos="fade-up">I’m freelance product designer based in LA.</h1>
+                    <h1 class="h2 aos-init aos-animate" data-aos="fade-up">Je suis designer freelance basé à Tourcoing</h1>
                     <NuxtLink data-aos="fade-up" class="btn btn-dark btn-with-ball mt-5 aos-init aos-animate" to="/contact">let’s work </NuxtLink>
                 </div>
             </div> 
