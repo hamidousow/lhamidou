@@ -4,9 +4,9 @@ export default defineNuxtConfig({
   },
   spaLoadingTemplate: false,
   modules: [
-    "@nuxt/eslint",
+    "@nuxt/eslint", 
     "@pinia/nuxt",
-  ],
+  ], 
   pinia: {
     storesDirs: ['./stores/**']
   },
@@ -32,6 +32,5 @@ export default defineNuxtConfig({
         }
       ]
     }
-  },
-  
+  }  
 })
