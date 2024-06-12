@@ -6,7 +6,12 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/eslint", 
     "@pinia/nuxt",
+    "nuxt-primevue",
+    
   ], 
+  primevue: {
+      /* Option */
+  },
   pinia: {
     storesDirs: ['./stores/**']
   },

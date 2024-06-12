@@ -3,7 +3,18 @@
     const $route = useRoute()
     const id = $route.params.id
 
-    const project = await $fetch('/api/project', { params : { id: id }})
+    const project = ref()
+    const displayCustom = ref(false);
+    const activeIndex = ref(0);
+
+    const imageClick = (index: any) => {
+        activeIndex.value = index;
+        displayCustom.value = true;
+    };
+
+    onMounted(async () => {
+        project.value = await $fetch('/api/project', { params : { id: id }})
+    })
 
 </script>
 
@@ -81,6 +92,34 @@
             </div>
         </div>
         <div class="container-fluid">
+            <Galleria 
+                v-model:activeIndex="activeIndex" 
+                v-model:visible="displayCustom" 
+                :value="project?.pro_images"  
+                :numVisible="7" 
+                containerStyle="max-width: 850px" 
+                :circular="true" 
+                :fullScreen="true" 
+                :showItemNavigators="true" 
+                :showThumbnails="false"
+            >
+                <template #item="slotProps">
+                    <img :src="project?.pro_images[activeIndex]" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+                </template>
+                <template #thumbnail="slotProps">
+                    <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+                </template>
+            </Galleria>
+            <div v-if="project?.pro_images" class="grid" style="max-width: 100%">
+                <div v-for="(image, index) of project?.pro_images" :key="index" class="col-4">
+                    <img 
+                        :src="image" 
+                        :alt="index.toString()" 
+                        style="cursor: pointer" 
+                        @click="imageClick(index)" 
+                    />
+                </div>
+            </div>
             <div class="row">
                 <a
                     class="gallery-item gallery-item-md aos-init col-md-12 px-0" 
