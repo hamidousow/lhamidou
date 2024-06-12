@@ -3,7 +3,18 @@
     const $route = useRoute()
     const id = $route.params.id
 
-    const project = await $fetch('/api/projects', { params : { id: id }})
+    const project = ref()
+    const displayCustom = ref(false);
+    const activeIndex = ref(0);
+
+    const imageClick = (index: any) => {
+        activeIndex.value = index;
+        displayCustom.value = true;
+    };
+
+    onMounted(async () => {
+        project.value = await $fetch('/api/project', { params : { id: id }})
+    })
 
 </script>
 
@@ -80,21 +91,58 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <!-- <div class="col-12 col" >
-                <div to="" class="gallery-item gallery-item-sm aos-init aos-animate" data-fancybox="gallery-1"
-                    data-aos="fade">
-                    <img src="" alt="">
-                </div>
-            </div> -->
-            <div class="col-12 col-sm-6">
+        <div class="container-fluid">
+            <Galleria 
+                v-model:activeIndex="activeIndex" 
+                v-model:visible="displayCustom" 
+                :value="project?.pro_images"  
+                :numVisible="7" 
+                containerStyle="max-width: 100%" 
+                :circular="true" 
+                :fullScreen="true" 
+                :showItemNavigators="true" 
+                :showThumbnails="false"
+            >
+                <template #item="slotProps">
+                    <img :src="project?.pro_images[activeIndex]" :alt="slotProps.item.alt" style="width: 100%; display: block" />
+                </template>
+                <template #thumbnail="slotProps">
+                    <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
+                </template>
+            </Galleria>
+            <div v-if="project?.pro_images" class="row">
                 <div
-                    v-for="imageUrl in project?.pro_images"
-                    class="gallery-item gallery-item-md aos-init" 
+                    class="gallery-item gallery-item-md aos-init col-md-12 px-0" 
                     data-fancybox="gallery-1" 
                     data-aos="fade">
-                    <img v-bind:src="imageUrl" alt="">
+                    <img 
+                        :src="project?.pro_images[0]" 
+                        alt="image name"
+                        @click="imageClick(0)"
+                    >
                 </div>
+                <template v-if="project?.pro_images.length > 1">
+                    <div
+                        class="gallery-item gallery-item-md aos-init col-md-5 px-0" 
+                        data-fancybox="gallery-1" 
+                        data-aos="fade">
+                        <img 
+                            :src="project?.pro_images[1]" 
+                            alt="image name"
+                            @click="imageClick(1)"
+                        >
+                    </div> 
+                    <div
+                        class="gallery-item gallery-item-md aos-init col-md-7 px-0" 
+                        data-fancybox="gallery-1" 
+                        data-aos="fade">
+                        <img 
+                            :src="project?.pro_images[2]" 
+                            alt="image name"
+                            @click="imageClick(2)"
+                        >
+                    </div> 
+                </template>
             </div>
         </div>
         <div class="pt-160 pb-130 shape-parent overflow-hidden">
@@ -128,5 +176,22 @@
 </template>
 
 <style>
+
+    .gallery-item:first-child {
+        height: 700px;
+    }
+
+    .gallery-item {
+        height: 500px;
+    }
+
+    .gallery-item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+
 
 </style>

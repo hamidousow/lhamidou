@@ -1,15 +1,90 @@
-<script lang="ts" setup>
+<script lang="ts" setup> 
+
+
+  const encryptedEmail = ref("aGFtaWRvdXNvdy1wcm9AaG90bWFpbC5jb20=");
+  const decodedEmail = ref('');
+  
+  onMounted(() => {
+    decodedEmail.value = atob(encryptedEmail.value);
+  })
+  
 
 </script>
 
 <template>
-  <div>
-    
+  <div class="content-wrap">
+    <div class="py-160 px-160">
+      <div class="container">
+        <div class="mb-n8 row">
+          <div data-aos="fade-up" class="col-12 col-lg-10 col-xl-8 aos-init aos-animate">
+            <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes, ou pour passer le salut, contactez-moi 👋
+            </h1>
+          </div>
+        </div>
+        <div class="gh-1 gv-2 pb-10 row">
+          <div class="col-12 col-lg-4 pe-0">
+            <div class="mb-60 aos-init aos-animate" data-aos="fade-right">
+              <p class="lead mb-17 fw-medium">Contact info:</p>
+              <ul class="list-group borderless font-size-17">
+                <li class="list-group-item"> <a v-bind:href="`mailto:${decodedEmail}`" class="text-decoration-none">Me contacter par mail</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 
 
-<style>
+<style scoped>
+
+.py-160 {
+  padding-top: 160px;
+}
+
+.px-160 {
+  padding-bottom: 160px;
+}
+
+.list-group.borderless .list-group-item {
+    border: 0;
+    color: inherit;
+    background-color: initial;
+    padding: 0;
+}
+
+.form-container {
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-right: 0;
+}
+
+.row.gv-2>[class*=col] {
+    padding-top: 40px;
+}
+.row.gh-1>[class*=col] {
+    padding-left: 30px;
+}
+
+.form-control {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    padding-bottom: 17px;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+}
+
+@media (max-width: 765px) {
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+  }
 
 </style>

@@ -1,13 +1,17 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { 
-    enabled: true 
+    enabled: true
   },
   spaLoadingTemplate: false,
   modules: [
-    "@nuxt/eslint",
-    '@pinia/nuxt',
-  ],
+    "@nuxt/eslint", 
+    "@pinia/nuxt",
+    "nuxt-primevue",
+    
+  ], 
+  primevue: {
+      /* Option */
+  },
   pinia: {
     storesDirs: ['./stores/**']
   },
@@ -17,7 +21,7 @@ export default defineNuxtConfig({
       pathPrefix: false
     }
   ],
-  css: ['~/assets/stylesheets/styles.css'],
+  css: ['~/assets/stylesheets/main.scss'],
   app: {
     head: {
       link: [
@@ -33,6 +37,5 @@ export default defineNuxtConfig({
         }
       ]
     }
-  },
-  
+  }  
 })

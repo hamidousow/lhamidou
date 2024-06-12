@@ -1,6 +1,4 @@
-<script setup lang="ts">
-  import { createClient } from '@supabase/supabase-js';
-import '~/assets/stylesheets/styles.css';
+<script setup lang="ts">  
 
   const layout = "default";
 
@@ -14,6 +12,7 @@ import '~/assets/stylesheets/styles.css';
 </template>
 
 <style>
+@use "~/assets/scss/main.scss";
   .body-content {
     position: relative;
     min-height: 100vh;

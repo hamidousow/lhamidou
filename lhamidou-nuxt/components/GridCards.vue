@@ -14,7 +14,7 @@ import { useProjectsStore } from '~/stores/projectStore';
 <template>
     <div class="container pb-160">
         <div class="d-block" v-if="loading">...Loading projects</div>
-        <div class="cards d-flex">
+        <div class="cards d-flex flex-column flex-md-row">
             <div class="branding col-12 isotope-item col-md-6 pt-100 px-0" v-for="project in projects">
                 <Card v-bind:project="project" :key="project.pro_id"/>
             </div>
