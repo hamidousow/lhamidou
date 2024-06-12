@@ -97,7 +97,7 @@
                 v-model:visible="displayCustom" 
                 :value="project?.pro_images"  
                 :numVisible="7" 
-                containerStyle="max-width: 850px" 
+                containerStyle="max-width: 100%" 
                 :circular="true" 
                 :fullScreen="true" 
                 :showItemNavigators="true" 
@@ -111,16 +111,16 @@
                 </template>
             </Galleria>
             <div v-if="project?.pro_images" class="grid" style="max-width: 100%">
-                <div v-for="(image, index) of project?.pro_images" :key="index" class="col-4">
+                <div v-for="(image, index) of project?.pro_images" :key="index" class="col-12">
                     <img 
                         :src="image" 
                         :alt="index.toString()" 
-                        style="cursor: pointer" 
+                        class="image"
                         @click="imageClick(index)" 
                     />
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <a
                     class="gallery-item gallery-item-md aos-init col-md-12 px-0" 
                     data-fancybox="gallery-1" 
@@ -143,7 +143,7 @@
                         <img v-bind:src="project?.pro_images[2]" alt="">
                     </div>               
                 </template>            
-            </div>
+            </div> -->
         </div>
         <div class="pt-160 pb-130 shape-parent overflow-hidden">
             <div class="container">
@@ -189,6 +189,11 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
+    }
+
+    .image {
+        cursor: pointer;
+        width: 100%;
     }
 
 </style>
