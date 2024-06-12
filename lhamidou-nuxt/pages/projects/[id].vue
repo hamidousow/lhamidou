@@ -110,40 +110,40 @@
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
                 </template>
             </Galleria>
-            <div v-if="project?.pro_images" class="grid" style="max-width: 100%">
-                <div v-for="(image, index) of project?.pro_images" :key="index" class="col-12">
-                    <img 
-                        :src="image" 
-                        :alt="index.toString()" 
-                        class="image"
-                        @click="imageClick(index)" 
-                    />
-                </div>
-            </div>
-            <!-- <div class="row">
-                <a
+            <div v-if="project?.pro_images" class="row">
+                <div
                     class="gallery-item gallery-item-md aos-init col-md-12 px-0" 
                     data-fancybox="gallery-1" 
-                    data-aos="fade"
-                    :href="project?.pro_images[0]"
+                    data-aos="fade">
+                    <img 
+                        :src="project?.pro_images[0]" 
+                        alt="image name"
+                        @click="imageClick(0)"
                     >
-                    <img v-bind:src="project?.pro_images[0]" alt="">
-                </a>   
+                </div>
                 <template v-if="project?.pro_images.length > 1">
                     <div
                         class="gallery-item gallery-item-md aos-init col-md-5 px-0" 
                         data-fancybox="gallery-1" 
                         data-aos="fade">
-                        <img v-bind:src="project?.pro_images[1]" alt="">
-                    </div>               
+                        <img 
+                            :src="project?.pro_images[1]" 
+                            alt="image name"
+                            @click="imageClick(1)"
+                        >
+                    </div> 
                     <div
                         class="gallery-item gallery-item-md aos-init col-md-7 px-0" 
                         data-fancybox="gallery-1" 
                         data-aos="fade">
-                        <img v-bind:src="project?.pro_images[2]" alt="">
-                    </div>               
-                </template>            
-            </div> -->
+                        <img 
+                            :src="project?.pro_images[2]" 
+                            alt="image name"
+                            @click="imageClick(2)"
+                        >
+                    </div> 
+                </template>
+            </div>
         </div>
         <div class="pt-160 pb-130 shape-parent overflow-hidden">
             <div class="container">
@@ -189,11 +189,9 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
+        cursor: pointer;
     }
 
-    .image {
-        cursor: pointer;
-        width: 100%;
-    }
+
 
 </style>
