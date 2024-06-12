@@ -1,6 +1,4 @@
-<script setup lang="ts">
-  //import '~/assets/stylesheets/styles.css';
-  
+<script setup lang="ts">  
 
   const layout = "default";
 

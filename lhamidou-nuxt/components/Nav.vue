@@ -21,20 +21,6 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="d-flex align-items-center">
-                <span>Filter</span>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <NuxtLink class="nav-link" to="/flyers">All Projects</NuxtLink>
-                    </li>                    
-                    <li class="nav-item">
-                        <NuxtLink class="nav-link" to="/logos">Logos</NuxtLink>
-                    </li>
-                    <li class="nav-item">
-                        <NuxtLink class="nav-link" to="/flyers">Flyers</NuxtLink>
-                    </li>
-                </ul>
-            </div> -->
         </div>
     </nav>
 </template>

@@ -80,21 +80,30 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <!-- <div class="col-12 col" >
-                <div to="" class="gallery-item gallery-item-sm aos-init aos-animate" data-fancybox="gallery-1"
-                    data-aos="fade">
-                    <img src="" alt="">
-                </div>
-            </div> -->
-            <div class="col-12 col-sm-6">
-                <div
-                    v-for="imageUrl in project?.pro_images"
-                    class="gallery-item gallery-item-md aos-init" 
+        <div class="container-fluid">
+            <div class="row">
+                <a
+                    class="gallery-item gallery-item-md aos-init col-md-12 px-0" 
                     data-fancybox="gallery-1" 
-                    data-aos="fade">
-                    <img v-bind:src="imageUrl" alt="">
-                </div>
+                    data-aos="fade"
+                    :href="project?.pro_images[0]"
+                    >
+                    <img v-bind:src="project?.pro_images[0]" alt="">
+                </a>   
+                <template v-if="project?.pro_images.length > 1">
+                    <div
+                        class="gallery-item gallery-item-md aos-init col-md-5 px-0" 
+                        data-fancybox="gallery-1" 
+                        data-aos="fade">
+                        <img v-bind:src="project?.pro_images[1]" alt="">
+                    </div>               
+                    <div
+                        class="gallery-item gallery-item-md aos-init col-md-7 px-0" 
+                        data-fancybox="gallery-1" 
+                        data-aos="fade">
+                        <img v-bind:src="project?.pro_images[2]" alt="">
+                    </div>               
+                </template>            
             </div>
         </div>
         <div class="pt-160 pb-130 shape-parent overflow-hidden">
@@ -129,8 +138,18 @@
 
 <style>
 
+    .gallery-item:first-child {
+        height: 700px;
+    }
+
+    .gallery-item {
+        height: 500px;
+    }
+
     .gallery-item img {
+        object-fit: cover;
         width: 100%;
+        height: 100%;
     }
 
 </style>
