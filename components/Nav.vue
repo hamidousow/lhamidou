@@ -5,7 +5,7 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-            <NuxtLink class="navbar-brand" to="/">Navbar</NuxtLink>
+            <NuxtLink class="navbar-brand" to="/">L'Hamidou</NuxtLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,5 +28,10 @@
 
 
 <style>
+
+    .navbar-brand {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+    }
 
 </style>
