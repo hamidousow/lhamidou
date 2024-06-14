@@ -9,7 +9,6 @@
   force = true
 
 [[redirects]]
-  from = "/api/project"
-  to = "/.netlify/functions/project"
+  from = "/api/project/:id"
+  to = "/.netlify/functions/project/:id"
   status = 200
-  force = true

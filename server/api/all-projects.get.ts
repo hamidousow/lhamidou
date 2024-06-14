@@ -1,12 +1,11 @@
 import "dotenv/config"
-import { getImageUrl, supabaseClient } from "../utils/supabaseUtils";
 
 export default defineEventHandler(async () => {
 
 
     let projects: {}[] | null = []
 
-    const response: any = await $fetch('http://lhamidou.netlify.app/netlify/functions/all-projects');
+    const response: any = await $fetch('http://localhost:8888/.netlify/functions/all-projects');
     projects = await response.json();
 
     // const { data, error } = await supabaseClient    
