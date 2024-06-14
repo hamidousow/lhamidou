@@ -12,3 +12,7 @@
   from = "/api/project/:id"
   to = "/.netlify/functions/project/:id"
   status = 200
+
+[context.dev.environment]
+  NODE_ENV= "devlopment"
+  LOCAL_HOST="http://localhost:8888"  

@@ -1,9 +1,10 @@
 import type { Context, Handler } from "@netlify/functions";
 
-const handler:  Handler = async () => {
+export default async (request: Request, context: Context) => {
 
-    const id = 1
-    
+    const { id } = context.params
+
+    //todo: use netlify blobs 
     const {data, error} = await supabaseClient    
         .from('t_project')
         .select('pro_name, pro_description, pro_client, pro_category, pro_images')
@@ -32,5 +33,3 @@ const handler:  Handler = async () => {
     }
 
 }
-
-export { handler }
