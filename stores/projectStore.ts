@@ -14,7 +14,7 @@ export const useProjectsStore = defineStore("projects", () => {
    async function getAllProjects() {
         loading.value = true;
         try {            
-            const data = await $fetch('/api/all-projects');
+            const data = await $fetch('http://localhost:8888/.netlify/functions/all-projects');
             projects.value =  data as any[]
         } catch(error) {
             console.log(error);            

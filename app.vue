@@ -5,13 +5,9 @@
 </script>
 
 <template>
-  <div>
-    <Nav />
-    <div class="bg-body-tertiary body-content">
-      <NuxtPage />
-    </div>
-    <Footer />
-  </div>
+  <NuxtLayout :name="layout">
+    <NuxtPage />
+  </NuxtLayout> 
 </template>
 
 <style>
