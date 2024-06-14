@@ -7,3 +7,9 @@
   to = "/.netlify/functions/all-projects"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/api/project"
+  to = "/.netlify/functions/project"
+  status = 200
+  force = true
