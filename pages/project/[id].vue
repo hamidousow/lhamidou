@@ -1,34 +1,20 @@
 <script lang="ts" setup>
 
     const $route = useRoute()
+    const project = ref()
     const id = $route.params.id
 
     
     const displayCustom = ref(false);
     const activeIndex = ref(0);
 
-    const imageClick = (index: any) => {
+    const imageClick = (index: number) => {
         activeIndex.value = index;
         displayCustom.value = true;
     };
 
-    const project = ref({
-        pro_name: '',
-        pro_description: '',
-        pro_category: [],
-        pro_client: '',
-        pro_images: []                                                  
-    })
-
-    onMounted(async () => {
-        try {
-            project.value = await $fetch(`/api/project/${id}`)
-            
-        } catch (error) {
-            console.log(error);
-            
-        }
-        
+    watchEffect( async () => {
+        project.value = await (await fetch(`/api/project/${id}`)).json()
         console.log(project.value);
         
     })
