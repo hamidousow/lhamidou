@@ -3,7 +3,7 @@
     const $route = useRoute()
     const id = $route.params.id
 
-    const project = ref()
+    
     const displayCustom = ref(false);
     const activeIndex = ref(0);
 
@@ -12,8 +12,25 @@
         displayCustom.value = true;
     };
 
+    const project = ref({
+        pro_name: '',
+        pro_description: '',
+        pro_category: [],
+        pro_client: '',
+        pro_images: []                                                  
+    })
+
     onMounted(async () => {
-        project.value = await $fetch('/api/project', { params : { id: id }})
+        try {
+            project.value = await $fetch(`/api/project/${id}`)
+            
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
+        console.log(project.value);
+        
     })
 
 </script>

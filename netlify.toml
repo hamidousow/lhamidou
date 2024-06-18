@@ -1,18 +1,13 @@
 [build]
   publish = "dist"
   functions = "netlify/functions"
-
+   
 [[redirects]]
-  from = "/api/all-projets"
+  from= "/api/all-projects"
   to = "/.netlify/functions/all-projects"
-  status = 200
-  force = true
+  status= 200
 
 [[redirects]]
-  from = "/api/project/:id"
-  to = "/.netlify/functions/project/:id"
-  status = 200
-
-[context.dev.environment]
-  NODE_ENV= "devlopment"
-  LOCAL_HOST="http://localhost:8888"  
+  from= "/api/project/*"
+  to = "/.netlify/functions/project/:splat"
+  status= 200

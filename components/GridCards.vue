@@ -1,22 +1,16 @@
 <script lang="ts" setup>
 import Card from './Card.vue';
-import { useProjectsStore } from '~/stores/projectStore';
 
-    const projectsStore =  useProjectsStore();
-    const projects = computed(() => projectsStore.projects)
-    const loading = computed(() => projectsStore.loading)
+ const props = defineProps(['projects', 'isLoading'])
 
-    onMounted(() => {
-        projectsStore.getAllProjects()
-    })
 </script>
 
 <template>
     <div class="container pb-160">
-        <div class="d-block" v-if="loading">...Loading projects</div>
+        <div class="d-block" v-if="props.isLoading">...Loading projects</div>
         <div class="cards d-flex flex-column flex-md-row">
-            <div class="branding col-12 isotope-item col-md-6 pt-100 px-0" v-for="project in projects">
-                <Card v-bind:project="project" :key="project.pro_id"/>
+            <div class="branding col-12 isotope-item col-md-6 pt-100 px-0" v-for="project in props.projects">
+                <Card v-bind:project="project" :key="project?.pro_id"/>
             </div>
         </div>
     </div>

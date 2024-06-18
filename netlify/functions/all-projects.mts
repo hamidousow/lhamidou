@@ -1,8 +1,8 @@
 import type { Handler } from "@netlify/functions";
-import { supabaseClient, getImageUrl } from "../../server/utils/supabaseUtils";
+import { supabaseClient, getImageUrl } from "../../utils/supabaseUtils";
 
 const handler: Handler = async() => {
-    let projects: any[] = [];
+    const projects: object[] = [];
 
     const { data, error } = await supabaseClient
         .from('t_project')
@@ -22,6 +22,9 @@ const handler: Handler = async() => {
             projects.push(element);
         });
     }
+
+    console.log(projects);
+    
 
     return {
         statusCode: 200,

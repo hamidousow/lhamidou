@@ -7,15 +7,15 @@
 <template>
     <span class="d-block">
             <NuxtLink class="card card-portfolio card-default card-image-md card-hover-zoom" 
-                :to="{ name: 'projects-id',  params: { id: props.project.pro_id}}"
+                :to="`/project/${props.project?.pro_id}`"
             >
                 <span class="card-img rounded-0" data-cursor-style="cursor-circle" data-cursor-text="view">
-                    <img :src="props.project.pro_cover" alt="" data-aos="fade-up"
+                    <img :src="props.project?.pro_cover" alt="" data-aos="fade-up"
                         class="aos-init aos-animate">
                 </span>
                 <span class="card-body">
-                    <span class="card-title h4">{{ props.project.pro_name }}</span>
-                    <span class="card-category subtitle" v-for="category in props.project.pro_category">{{ category }}</span>
+                    <span class="card-title h4">{{ props.project?.pro_name }}</span>
+                    <span class="card-category subtitle" v-for="category in props.project?.pro_category">{{ category }}</span>
                 </span>
             </NuxtLink>
     </span>
