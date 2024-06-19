@@ -21,10 +21,7 @@ const handler: Handler = async() => {
             element.pro_cover = getImageUrl("lhamidou_projects_images", element.pro_cover);
             projects.push(element);
         });
-    }
-
-    console.log(projects);
-    
+    }    
 
     return {
         statusCode: 200,

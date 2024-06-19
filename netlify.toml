@@ -8,6 +8,6 @@
   status= 200
 
 [[redirects]]
-  from= "/api/project/*"
-  to = "/.netlify/functions/project/:splat"
+  from= "/api/project id:id"
+  to = "/.netlify/functions/project/:id"
   status= 200

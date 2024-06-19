@@ -1,11 +1,17 @@
-import type { HandlerEvent } from "@netlify/functions";
+import type { Handler, HandlerEvent,  } from "@netlify/functions";
 import { supabaseClient, getMultiplesImagesUrl } from "../../utils/supabaseUtils";
 
-export default async (event: HandlerEvent) => {
+const handler: Handler = async (event: HandlerEvent) => {
+        
+        const id = event.queryStringParameters?.id 
 
-    try {
-        console.log("Event object:", JSON.stringify(event, null, 2));
-        const id = 1
+
+        if(id == undefined) {
+            return({
+                statusCode: 500,
+                body: JSON.stringify({ error: 'No ID parameter' })
+            }); 
+        }
         
         //todo: use netlify blobs 
         const {data, error} = await supabaseClient    
@@ -16,24 +22,25 @@ export default async (event: HandlerEvent) => {
 
         if(error) {
             console.log("error");   
-            return new Response(
-                JSON.stringify({ error: 'Internal Server Error' }), {
-                status: 500
+            return ({
+                statusCode: 500,
+                body: JSON.stringify({ error: 'Internal Server Error' })
             });  
         }   
         
         if(data != null) {
             data.pro_images = getMultiplesImagesUrl(data.pro_images)
-            return new Response(JSON.stringify(data));
+            return ({
+                statusCode: 200,
+                body: JSON.stringify({ project: data})
+            });
         } else {
             console.log("project not find.")
-            return new Response(JSON.stringify(data), {
-                status: 401
-            });
+            return ({
+                statusCode: 500,
+                body: JSON.stringify({ error: 'Internal Server Error' })
+            }); 
         }
+};
 
-    } catch (error) {
-        console.log(error);
-        
-    }
-}
+export { handler };

@@ -13,10 +13,9 @@
         displayCustom.value = true;
     };
 
-    watchEffect( async () => {
-        project.value = await (await fetch(`/api/project/${id}`)).json()
-        console.log(project.value);
-        
+    onMounted( async () => {
+        const data = await $fetch(`/api/project/${id}`)
+        project.value =  data.project        
     })
 
 </script>
