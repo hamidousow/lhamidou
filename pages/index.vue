@@ -5,8 +5,8 @@
 
     onMounted(async () => {
         try {            
-            const data = await $fetch(`http://localhost:8888/.netlify/functions/all-projects`);
-            projects.value =  data as object[]
+            const data = await $fetch(`/api/all-projects`);
+            projects.value =  data
         } catch(error) {
             console.log(error);            
         }
