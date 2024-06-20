@@ -17,21 +17,8 @@
       <div class="container">
         <div class="mb-n8 row">
           <div data-aos="fade-up" class="col-12 col-lg-10 col-xl-8 aos-init aos-animate">
-            <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes, ou pour passer le salut, contactez-moi 👋
-            </h1>
+            <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes, <span class="btn btn-dark btn-lg"> contactez-moi 👋 </span></h1>
           </div>
-        </div>
-        <div class="gh-1 gv-2 pb-10 row">
-          <div class="col-12 col-lg-4 pe-0">
-            <div class="mb-60 aos-init aos-animate" data-aos="fade-right">
-              <p class="lead mb-17 fw-medium">Contact info:</p>
-              <ul class="list-group borderless font-size-17">
-                <li class="list-group-item"> <a v-bind:href="`mailto:${decodedEmail}`" class="text-decoration-none">Me contacter par mail</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
         </div>
       </div>
     </div>
