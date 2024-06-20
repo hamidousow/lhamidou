@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="bg-body-tertiary body-content">
-            <Nav />
+            <NavComponent />
             <main>
                 <NuxtPage />
             </main>

@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
@@ -11,8 +7,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
                         <NuxtLink class="nav-link active" aria-current="page" to="/">Home</NuxtLink>
                     </li>                    

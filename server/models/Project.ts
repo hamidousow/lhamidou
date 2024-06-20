@@ -1,4 +1,4 @@
-class Project {
+export class Project {
     private id!: number;
     private name!: string;
     private description!: string;
@@ -6,7 +6,8 @@ class Project {
     private category!: string[];
     private images!: string[];
 
-    public Project(name: string, description: string, client:string, category:string[], images: string[]) {
+    public Project(id: number, name: string, description: string, client:string, category:string[], images: string[]) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.client = client;
