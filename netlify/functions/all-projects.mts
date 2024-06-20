@@ -10,10 +10,10 @@ const handler: Handler = async() => {
 
     if (error) {
         console.log(error);
-        return {
+        return ({
             statusCode: 500,
-            body: JSON.stringify({ error: 'Internal Server Error' })
-        };
+            body: JSON.stringify({ error: 'Database error' })
+        });
     }
 
     if (data != null) {
@@ -21,12 +21,15 @@ const handler: Handler = async() => {
             element.pro_cover = getImageUrl("lhamidou_projects_images", element.pro_cover);
             projects.push(element);
         });
-    }    
+    }   
+    
+    console.log('hello net function');
+    
 
-    return {
+    return ({
         statusCode: 200,
-        body: JSON.stringify(projects)
-    }
+        body: JSON.stringify({projects : projects})
+    })
 }
 
 export { handler }

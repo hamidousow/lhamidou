@@ -1,17 +1,10 @@
 <script lang="ts" setup>
 
-    const projects = ref()
     const loading = ref(false)
+    const projects = ref([])
 
-    onMounted(async () => {
-        try {            
-            const data = await $fetch(`/api/all-projects`);
-            projects.value =  data
-        } catch(error) {
-            console.log(error);            
-        }
-    })
-
+    const { data } = await useFetch(`/api/all-projects`)    
+    projects.value = toRaw(data.value.projects) 
 </script>
 
 <template>   
