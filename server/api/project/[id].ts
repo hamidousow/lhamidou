@@ -7,7 +7,7 @@ export default defineEventHandler( async (event) => {
 
     const id = getRouterParam(event, 'id')
 
-    const project= await $fetch(`${appHost}/.netlify/functions/project`, { query: { id: id }})    
+    const project= await $fetch(`${localHost}/.netlify/functions/project`, { query: { id: id }})    
     return project
 })
 

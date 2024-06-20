@@ -6,7 +6,9 @@
     onMounted(async () => {
         try {            
             const data = await $fetch(`/api/all-projects`);
-            projects.value =  data
+            projects.value = data
+            console.log(projects.value);
+            
         } catch(error) {
             console.log(error);            
         }
