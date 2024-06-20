@@ -39,7 +39,7 @@
                                         </li>
                                         <li class="list-group-item">
                                             <span class="fw-medium me-8">Category:</span> 
-                                            <span v-for="category in project?.pro_category">{{  category }}</span>
+                                            <span v-for="category, index in project?.pro_category" :key="index">{{  category }}</span>
                                         </li>
                                     </ul>
                                 </div>
