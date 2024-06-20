@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 
     const $route = useRoute()
-    const project = ref()
     const id = $route.params.id
 
+    const { data: project } = await useFetch(`/api/project/${id}`)
     
     const displayCustom = ref(false);
     const activeIndex = ref(0);
@@ -13,10 +13,7 @@
         displayCustom.value = true;
     };
 
-    onMounted( async () => {
-        const data = await $fetch(`/api/project/${id}`)
-        project.value =  data.project        
-    })
+    
 
 </script>
 
