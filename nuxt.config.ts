@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   } ,
   routeRules: {
 
-    '/': { prerender: false },
+    '/': { prerender: true },
     '/api/project/**': { swr: false },
   }
 })

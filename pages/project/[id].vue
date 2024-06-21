@@ -2,9 +2,11 @@
 
     const $route = useRoute()
     const id = $route.params.id
+    const project = ref()
 
-    const { data: project } = await useFetch(`/api/project/${id}`)
-    
+    const { data } = await useFetch(`/api/project/${id}`)
+    project.value = data.value
+
     const displayCustom = ref(false);
     const activeIndex = ref(0);
 
