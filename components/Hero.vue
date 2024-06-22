@@ -14,8 +14,15 @@
                                 <circle cx="45" cy="45" r="45" fill="#eeeeee"></circle>
                             </svg>
                         </div>
-                        
-                        <img class="position-relative rounded-circle aos-init aos-animate" width="180" src="~/assets/images/avatar-freelancer.png" alt="" data-aos="fade">
+                        <div class="container-avatar rounded-circle">
+                            <img 
+                                class="position-relative aos-init aos-animate"
+                                src="~/assets/images/avatar-freelancer.jpg" 
+                                alt="avatar Hamidou" 
+                                width="100%"
+                                data-aos="fade"
+                            >
+                        </div>
                     </div>
                 </div>  
                 <div class="d-none d-lg-block col order-lg-2"></div>                   
@@ -34,9 +41,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="freelance-details col-12 col-lg-6 order-3 order-lg-1 col">
+                <div class="freelance-details pt-100 col-12 col-lg-6 order-3 order-lg-1 col">
                     <p class="subtitle aos-init aos-animate" data-aos="fade-up">Hamidou SOW</p>
-                    <h1 class="h2 aos-init aos-animate" data-aos="fade-up">Je suis designer freelance basé à Tourcoing</h1>
+                    <h1 class="title aos-init aos-animate" data-aos="fade-up">Je suis développeur et designer freelance basé à Tourcoing</h1>
                     <NuxtLink data-aos="fade-up" class="btn btn-dark btn-with-ball mt-5 aos-init aos-animate" to="/contact">let’s work </NuxtLink>
                 </div>
             </div> 
@@ -45,6 +52,13 @@
 </template>
 
 <style scoped>
+
+    .container-avatar {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+    }
+
     .shape-parent {
         position: relative;
         z-index: 0;
@@ -54,17 +68,20 @@
         left: 0;
         pointer-events: none;
         position: absolute;
-        right: 100px;
-        top: 0;
+        right: 30px;
+        top: -35px;
     }
 
     .pt-100 {
         padding-top: inherit;
     } 
-
     
-    .ps-30 {
-        padding-left: 30px;
+    .subtitle {
+        font-family: Inter, sans-serif;
+        font-size: .9375em;
+        font-weight: 500;
+        line-height: 1.8;
+        margin-bottom: 1.2em;
     }
 
     @media screen and (max-width: 992px) {

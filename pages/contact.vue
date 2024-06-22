@@ -13,17 +13,15 @@
 
 <template>
   <div class="content-wrap">
-    <div class="py-160 px-160">
-      <div class="container">
-        <div class="mb-n8 row">
-          <div data-aos="fade-up" class="col-12 col-lg-10 col-xl-8 aos-init aos-animate">
-            <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes, 
-              <a :href="`mailto:${decodedEmail}`" class="btn btn-dark btn-lg"> contactez-moi 👋 </a>
-            </h1>
-          </div>
+    <div class="container pt-160 pb-160">
+      <div class="mb-n8 row">
+        <div data-aos="fade-up" class="col-12 col-lg-10 col-xl-8 aos-init aos-animate">
+          <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes, 
+            <a :href="`mailto:${decodedEmail}`" class="btn btn-dark btn-lg"> contactez-moi 👋 </a>
+          </h1>
         </div>
       </div>
-    </div>
+    </div>    
   </div>
 </template>
 
@@ -31,13 +29,6 @@
 
 <style scoped>
 
-.py-160 {
-  padding-top: 160px;
-}
-
-.px-160 {
-  padding-bottom: 160px;
-}
 
 .list-group.borderless .list-group-item {
     border: 0;

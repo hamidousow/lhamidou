@@ -7,20 +7,19 @@ import Card from './Card.vue';
 
 <template>
     <div class="container pb-160">
-        <div class="d-block" v-if="props.isLoading">...Loading projects</div>
+        <div 
+            v-if="props.isLoading" 
+            class="d-block" >...Loading projects</div>
         <div class="cards d-flex flex-column flex-md-row">
-            <div class="branding col-12 isotope-item col-md-6 pt-100 px-0" v-for="project in props.projects">
-                <Card v-bind:project="project" :key="project?.pro_id"/>
+            <div 
+                v-for="project in props.projects"
+                :key="project?.pro_id"
+                class="branding col-12 isotope-item col-md-6 pt-100 px-0" >
+                <Card 
+                    :key="project?.pro_id"
+                    :project="project" 
+                />
             </div>
         </div>
     </div>
 </template>
-
-
-<style>
-
-    .pb-160 {
-        padding-bottom: 160px;
-    }
-
-</style>
