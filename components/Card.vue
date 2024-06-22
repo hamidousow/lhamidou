@@ -45,6 +45,10 @@
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
+    .card-title {
+        text-transform: uppercase;
+        font-weight: 500;
+    }
     .card-img {
         overflow: hidden;
         display: block;
