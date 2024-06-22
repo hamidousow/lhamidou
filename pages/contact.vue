@@ -16,8 +16,8 @@
     <div class="container pt-160 pb-160">
       <div class="mb-n8 row">
         <div data-aos="fade-up" class="col-12 col-lg-10 col-xl-8 aos-init aos-animate">
-          <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes, 
-            <a :href="`mailto:${decodedEmail}`" class="btn btn-dark btn-lg"> contactez-moi 👋 </a>
+          <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes
+            <ButtonComponent :to="`mailto:${decodedEmail}`"> contactez-moi 👋 </ButtonComponent>
           </h1>
         </div>
       </div>

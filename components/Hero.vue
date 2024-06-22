@@ -44,7 +44,7 @@
                 <div class="freelance-details pt-100 col-12 col-lg-6 order-3 order-lg-1 col">
                     <p class="subtitle aos-init aos-animate" data-aos="fade-up">Hamidou SOW</p>
                     <h1 class="title aos-init aos-animate" data-aos="fade-up">Je suis développeur et designer freelance basé à Tourcoing</h1>
-                    <NuxtLink data-aos="fade-up" class="btn btn-dark btn-with-ball mt-5 aos-init aos-animate" to="/contact">let’s work </NuxtLink>
+                    <ButtonComponent :to="'/contact'"> let’s work</ButtonComponent>
                 </div>
             </div> 
         </div>
