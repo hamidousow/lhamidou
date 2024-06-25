@@ -1,8 +1,11 @@
 <script lang="ts" setup>
+import { useProjectStore } from '~/stores/projectStore';
+
 
     const $route = useRoute()
     const id = $route.params.id
     const project = ref()
+    const store = useProjectStore()
 
     const { data } = await useFetch(`/api/project/${id}`)
     project.value = data.value
@@ -14,8 +17,6 @@
         activeIndex.value = index;
         displayCustom.value = true;
     };
-
-    
 
 </script>
 
@@ -36,25 +37,24 @@
                             <div class="gh-3 gv-1 d-flex flex-column">
                                 <div class="col-12 col-lg-auto col-sm-6">
                                     <ul class="list-group-gap borderless">
-                                        <li class="list-group-item">
+                                        <!-- <li class="list-group-item">
                                             <span class="fw-medium me-8">Date:</span> June 10, 2020
-                                        </li>
+                                        </li> -->
                                         <li class="list-group-item">
-                                            <span class="fw-medium me-8">Category:</span> 
+                                            <span class="fw-medium me-8">Category : </span> 
                                             <span v-for="category, index in project?.pro_category" :key="index">{{  category }}</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-12 col-lg-auto col-sm-6">
                                     <ul class="list-group-gap borderless">
-                                        <li class="list-group-item"><span class="fw-medium me-8">Client:</span> {{  project?.pro_client }}
+                                        <li class="list-group-item"><span class="fw-medium me-8">Client: </span> {{  project?.pro_client }}
                                         </li>
-                                        <li class="list-group-item"><span class="fw-medium">Share:</span>
+                                        <li class="list-group-item"><span class="fw-medium">Share: </span>
                                             <ul class="nav nav-gap-sm align-items-center d-inline-flex ms-4">
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="//facebook.com/runwebrun"><svg width="6"
-                                                            height="15" viewBox="0 0 10 22" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
+                                                    <a class="nav-link" href="//facebook.com/">
+                                                        <svg width="6" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path
                                                                 d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z"
                                                                 fill="currentColor"/>
@@ -62,7 +62,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="//twitter.com/runwebrun">
+                                                    <a class="nav-link" href="//twitter.com/">
                                                         <svg width="15" height="15" viewBox="0 0 25 21" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -72,7 +72,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="//instagram.com/runwebrun">
+                                                    <a class="nav-link" href="//instagram.com/">
                                                         <svg width="11" height="14" viewBox="0 0 11 14" fill="none"
                                                             xmlns="http://www.w3.org/2000/svg">
                                                             <path
@@ -154,13 +154,14 @@
                     <div class="me-md-auto col-md-10 col-lg-9">
                         <div class="interactive-links">
                             <img class="interactive-links-image" src="" width="230" alt="">
-                            <a class="nav-link display-4" href="/themebau/react/portfolio-single-style-2">
+                            <NuxtLink class="nav-link display-4" href="/">
                                 <u>Next project</u>
-                            </a>
+                            </NuxtLink>
                         </div>
                     </div>
                     <div class="col-auto col">
-                        <a class="btn btn-clean me-xl-100" href="/themebau/react/portfolio-single-style-2"><svg
+                        <a class="btn btn-clean me-xl-100" href="/themebau/react/portfolio-single-style-2">
+                            <svg
                                 class="icon-arrow icon-arrow-right" width="69" height="30" viewBox="0 0 69 30" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M54 2L67 15L54 28" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"

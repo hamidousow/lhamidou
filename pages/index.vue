@@ -4,7 +4,8 @@
     const projects = ref()
 
     const { data } = await useFetch(`/api/all-projects`)    
-    projects.value =  toRaw(data.value)
+    projects.value = toRaw(data.value)
+    
 </script>
 
 <template>   

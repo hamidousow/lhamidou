@@ -3,21 +3,22 @@ import { getImageUrl, supabaseClient } from "~/utils/supabaseUtils";
 
 export default defineEventHandler(async () => {
 
-    const projects: object[] = [];
+    const projects: object[] = []
 
     const { data, error } = await supabaseClient
         .from('t_project')
         .select('pro_id, pro_name, pro_category, pro_cover');
 
     if (error) {
-        console.log(error);
+        console.log('An error occurs in retrieve data from db ',error);
         return projects
     }
 
     if (data != null) {
+        
         data.forEach(element => {
             element.pro_cover = getImageUrl("lhamidou_projects_images", element.pro_cover);
-            projects.push(element);
+            projects.push(element);            
         });
     }     
 

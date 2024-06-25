@@ -5,6 +5,9 @@ export class Project {
     private client!: string;
     private category!: string[];
     private images!: string[];
+    private cover!: string;
+    private hasNext!: boolean;
+    private hasPrevious!: boolean;
 
     public Project(id: number, name: string, description: string, client:string, category:string[], images: string[]) {
         this.id = id;
@@ -13,6 +16,14 @@ export class Project {
         this.client = client;
         this.category = category;
         this.images = images;
+    }
+
+    public setId(id: number) {
+        this.id = id;
+    }
+
+    public getId() {
+        return this.id;
     }
 
     public setName(name: string) {
@@ -49,5 +60,27 @@ export class Project {
 
     public getImages() : string[] {
         return this.images;
+    }
+    public setCover(cover: string) {
+        this.cover = cover;
+    }
+
+    public getCover() : string {
+        return this.cover;
+    }
+
+    public setHasNext(hasNext: boolean) {
+        this.hasNext = hasNext;
+    }
+
+    public getHasNext() : boolean {
+        return this.hasNext;
+    }
+    public setHasPrevious(hasPrevious: boolean) {
+        this.hasPrevious = hasPrevious;
+    }
+
+    public getHasPrevious() : boolean {
+        return this.hasPrevious;
     }
 }
