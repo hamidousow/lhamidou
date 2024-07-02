@@ -113,7 +113,7 @@ import { useProjectStore } from '~/stores/projectStore';
             </Galleria>
             <div v-if="project?.pro_images" class="row">
                 <div
-                    class="gallery-item gallery-item-md aos-init col-md-12" 
+                    class="gallery-item gallery-item-md aos-init col-md-12 px-0" 
                     data-fancybox="gallery-1" 
                     data-aos="fade">
                     <img 
@@ -124,7 +124,7 @@ import { useProjectStore } from '~/stores/projectStore';
                 </div>
                 <template v-if="project?.pro_images.length > 1">
                     <div
-                        class="gallery-item gallery-item-md aos-init col-md-5" 
+                        class="gallery-item gallery-item-md aos-init col-md-5 px-0" 
                         data-fancybox="gallery-1" 
                         data-aos="fade">
                         <img 
@@ -134,7 +134,7 @@ import { useProjectStore } from '~/stores/projectStore';
                         >
                     </div> 
                     <div
-                        class="gallery-item gallery-item-md aos-init col-md-7" 
+                        class="gallery-item gallery-item-md aos-init col-md-7 px-0" 
                         data-fancybox="gallery-1" 
                         data-aos="fade">
                         <img 
