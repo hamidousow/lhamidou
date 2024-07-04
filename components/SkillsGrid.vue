@@ -6,19 +6,19 @@
 const services = ref([
     {
         name: "Logos",
-        description: "service description",
+        description: "Création de logos uniques et mémorables qui capturent l'essence de votre marque. Mon expertise en design garantit un logo professionnel qui se démarque.",
         imgSrc: logoItem,
         alt: "logo item"
     },
     {
         name: "Web Design",
-        description: "service description",
+        description: "Design de sites web élégants et fonctionnels, optimisés pour l'expérience utilisateur. Je crée des interfaces intuitives et attrayantes pour renforcer votre présence en ligne.",
         imgSrc: webdesignItem,
         alt: "webdesign item"
     },
     {
         name: "Developpement",
-        description: "service description",
+        description: "Développement complet de sites internet et maintenance, en utilisant les dernières technologies. Je conçois des sites performants, sécurisés, SEO Friendly et parfaitement adaptés à vos besoins.",
         imgSrc: developmentItem,
         alt: "development item"
     },
