@@ -10,7 +10,7 @@ import Card from './Card.vue';
         <div 
             v-if="props.isLoading" 
             class="d-block" >...Loading projects</div>
-        <div class="cards d-flex flex-column flex-md-row">
+        <div class="cards d-flex flex-column flex-md-row flex-wrap">
             <div 
                 v-for="project in props.projects"
                 :key="project?.pro_id"
