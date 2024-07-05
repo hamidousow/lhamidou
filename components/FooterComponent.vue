@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <footer id="footer" class="footer bg-dark text-white shape-parent overflow-hidden text-center pt-160 pb-60" >
+    <footer id="footer" class="footer background-black color-grey-light overflow-hidden text-center pt-160 pb-60" >
         <div class="pt-4 container">
             <ul class="nav nav-social nav-gap-sm align-items-center justify-content-center mb-30 text-white">
                 <li class="nav-item">
