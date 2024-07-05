@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar position-fixed start-0 end-0 bg-body-tertiary">
         <div class="container">
             <NuxtLink class="navbar-brand climate-crisis-navbar-brand" to="/">L'Hamidou</NuxtLink>
             <div class="nav-menu-icon" @click="show = !show">
@@ -45,6 +45,9 @@
 
 
 <style>
+    .navbar {
+        z-index: 99;
+    }
 
     .nav-menu {
         top: 0;

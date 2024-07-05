@@ -5,7 +5,7 @@
 <template>
     <div class="background-purple">
 
-        <div class="container">
+        <div class="container mt-60">
             <div class="pt-30 pb-60">
                 <div class="gh-1 gv-5 align-items-center justify-content-center text-center text-lg-start row">
                     <div class="col-auto order-1 order-lg-3 col ps-30 pt-60">
