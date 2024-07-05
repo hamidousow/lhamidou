@@ -1,6 +1,6 @@
 <template>
     <span>
-        <NuxtLink data-aos="fade-up" class="btn btn-dark btn-with-ball mt-30 mb-30" :to="props.to"> 
+        <NuxtLink data-aos="fade-up" class="background-green-flash btn mt-30 mb-30" :to="props.to"> 
             <slot></slot>
         </NuxtLink>
     </span>
@@ -11,6 +11,11 @@
 
 </script>
 
-<style>
+<style scoped>
+    .btn:hover {
+        background-color: var(--clr-green);
+    }
+
+
 
 </style>
