@@ -10,7 +10,7 @@
 
 <template>   
     <div>
-        <Hero />
+        <HeroComponent/>
         <SkillsGrid/>
         <GridCards :projects="projects" :is-loading="loading"/>
     </div> 

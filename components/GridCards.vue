@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import Card from './Card.vue';
 
- const props = defineProps(['projects', 'isLoading'])
+    const props = defineProps(['projects', 'isLoading'])
 
 </script>
 
@@ -15,7 +14,7 @@ import Card from './Card.vue';
                 v-for="project in props.projects"
                 :key="project?.pro_id"
                 class="branding col-12 isotope-item col-md-6 pt-100 px-0" >
-                <Card 
+                <CardComponent
                     :key="project?.pro_id"
                     :project="project" 
                 />
