@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-body-tertiary body-content">
+        <div class="background-grey-light body-content">
             <NavComponent />
             <main>
                 <NuxtPage />

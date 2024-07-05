@@ -11,7 +11,7 @@
 <template>   
     <div>
         <HeroComponent/>
-        <SkillsGrid/>
+        <ServicesComponent/>
         <GridCards :projects="projects" :is-loading="loading"/>
     </div> 
     

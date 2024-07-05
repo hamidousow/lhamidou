@@ -5,9 +5,20 @@
     --clr-green-flash: #CAD959;
     --clr-orange: #F28157;
     --clr-black: #151515;
-    --clr-grey-light: #e3e3e3;
+    --clr-grey-light: #f0f0f0;
 }
 
+.color-green-flash {
+    color: var(--clr-green-flash);
+}
+
+.color-orange {
+    color: var(--clr-orange);
+}
+
+.background-black {
+    background-color: var(--clr-black);
+}
 .background-purple {
     background-color: var(--clr-purple);
 }
@@ -18,4 +29,8 @@
 
 .background-green-flash {
     background-color: var(--clr-green-flash);
+}
+
+.background-grey-light {
+    background-color: var(--clr-grey-light);
 }
