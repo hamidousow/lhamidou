@@ -1,6 +1,6 @@
 <template>
     <span>
-        <NuxtLink data-aos="fade-up" class="btn btn-dark btn-with-ball" :to="props.to"> 
+        <NuxtLink data-aos="fade-up" class="btn btn-dark btn-with-ball mt-30 mb-30" :to="props.to"> 
             <slot></slot>
         </NuxtLink>
     </span>
