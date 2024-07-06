@@ -11,11 +11,6 @@
                     <div class="col-auto order-1 order-lg-3 col ps-30 pt-60">
                         <div class="shape-parent lines-style-2">
                             <div class="line text-dark"></div>
-                            <div class="shape mt-n30 ms-n30 me-100 me-lg-0 d-block">
-                                <svg data-rellax-speed="-1" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="45" cy="45" r="45" fill="#eeeeee"></circle>
-                                </svg>
-                            </div>
                             <div class="container-avatar rounded-circle">
                                 <img 
                                     class="position-relative aos-init aos-animate"
@@ -63,19 +58,6 @@
         width: 120px;
         height: 120px;
         overflow: hidden;
-    }
-
-    .shape-parent {
-        position: relative;
-        z-index: 0;
-    }
-    .shape {
-        bottom: 0;
-        left: 0;
-        pointer-events: none;
-        position: absolute;
-        right: 30px;
-        top: -35px;
     }
 
     .pt-100 {
