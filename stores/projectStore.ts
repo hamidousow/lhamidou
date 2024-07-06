@@ -13,14 +13,9 @@ export const useProjectStore = defineStore('project', () => {
         
     }
 
-    function getNextProject() {
-        const tabProject = allProjects.value
-        if(tabProject !=null && tabProject.length > 0) {
-            for(let i = 0; i < tabProject.length; i++ ) {
-                tabProject[i+1] ? tabProject[i].setHasNext(true) : tabProject[i].setHasNext(false);
-                console.log(tabProject[i].getHasNext());
-            }            
-        }
+    function getNextProject() {  
+        console.log("all projects ",allProjects);
+        
     }
 
     return { allProjects, hasNextProject, getNextProject, getAllProjects }

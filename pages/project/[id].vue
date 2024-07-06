@@ -7,11 +7,15 @@ import { useProjectStore } from '~/stores/projectStore';
     const project = ref()
     const store = useProjectStore()
 
+   const displayCustom = ref(false);
+    const activeIndex = ref(0);
+
     const { data } = await useFetch(`/api/project/${id}`)
+
     project.value = data.value
 
-    const displayCustom = ref(false);
-    const activeIndex = ref(0);
+    store.getNextProject()
+    
 
     const imageClick = (index: number) => {
         activeIndex.value = index;
@@ -149,7 +153,7 @@ import { useProjectStore } from '~/stores/projectStore';
         <div class="pt-160 pb-130 shape-parent overflow-hidden">
             <div class="container">
                 <hr class="mt-0 mb-100 pb-7">
-                <div
+                <!-- <div
                     class="gv-1 align-items-center justify-content-center justify-content-md-between text-center text-md-start row">
                     <div class="me-md-auto col-md-10 col-lg-9">
                         <div class="interactive-links">
@@ -171,7 +175,7 @@ import { useProjectStore } from '~/stores/projectStore';
                             </svg>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
