@@ -16,9 +16,9 @@
     <div class="container pt-160 pb-160">
       <div class="mb-n8 row">
         <div data-aos="fade-up" class="col-12 col-lg-10 col-xl-8 aos-init aos-animate">
-          <h1 class="h2 mt-15 pb-4 pb-sm-0 mb-130">Pour toutes demandes
-            <ButtonComponent :to="`mailto:${decodedEmail}`"> contactez-moi 👋 </ButtonComponent>
-          </h1>
+          <h1 class="h2 mt-15 pb-4 pb-sm-0">Besoin d'un <strong> logo </strong> unique et personnalisé ? D'un <strong> site vitrine </strong> fait sur mesure et SEO friendly ? </h1>
+          <p> Envoyez-moi un message et démarrer votre projet dès aujourd'hui ! </p>
+          <ButtonComponent :to="`mailto:${decodedEmail}`"> Passer à l'action 🚀 </ButtonComponent>
         </div>
       </div>
     </div>    
