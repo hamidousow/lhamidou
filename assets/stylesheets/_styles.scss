@@ -12,6 +12,10 @@ body {
     color: var(--clr-black);
 }
 
+.container {
+    width: 100%;
+}
+
 .title {
     font-size: clamp(1.7em, 28px, 3em);    
     line-height: 1.2;

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 
-    const loading = ref(false)
+    // const loading = ref(false)
     const projects = ref()
 
     const { data } = await useFetch(`/api/all-projects`)    
@@ -12,7 +12,7 @@
     <div>
         <HeroComponent/>
         <ServicesComponent/>
-        <GridCards :projects="projects" :is-loading="loading"/>
+        <GridCards :projects="projects"/>
     </div> 
     
 </template>

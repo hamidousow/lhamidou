@@ -30,7 +30,7 @@
                 <ul class="menu my-0">
                     <li class="menu-item">
                         <NuxtLink 
-                            class="menu-item-link" 
+                            class="menu-item-link climate-crisis-regular-font" 
                             aria-current="page" 
                             to="/"  
                             @click="isActive = !isActive"
@@ -38,7 +38,15 @@
                     </li>                    
                     <li class="menu-item">
                         <NuxtLink 
-                            class="menu-item-link" 
+                            class="menu-item-link climate-crisis-regular-font" 
+                            aria-current="page" 
+                            to="/projects"  
+                            @click="isActive = !isActive"
+                        >Mes réalisations</NuxtLink>
+                    </li>                    
+                    <li class="menu-item">
+                        <NuxtLink 
+                            class="menu-item-link climate-crisis-regular-font" 
                             to="/contact"
                             @click="isActive = !isActive"                          
                         >Contact</NuxtLink>
@@ -91,13 +99,7 @@
     }
     .menu-item-link {
         text-align: center;
-        font-family: 'Climate Crisis', sans-serif;
-        font-optical-sizing: auto;
-        font-size: 38px;
-        font-weight: 400;
-        font-style: normal;
-        font-variation-settings: "YEAR" 1979;
-
+        font-size: 21px;
         color: var(--clr-green-flash);
     }
 

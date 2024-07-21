@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 
-    const props = defineProps(['projects', 'isLoading'])
+    const props = defineProps(['projects'])
 
 </script>
 
 <template>
     <div class="container pb-160">
-        <div 
+        <!-- <div 
             v-if="props.isLoading" 
-            class="d-block" >...Loading projects</div>
+            class="d-block" >...Loading projects</div> -->
         <div class="cards d-flex flex-column flex-md-row flex-wrap">
             <div 
                 v-for="project in props.projects"
