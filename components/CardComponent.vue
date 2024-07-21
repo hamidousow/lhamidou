@@ -29,7 +29,7 @@
     </span>
 </template>
 
-<style>
+<style scoped>
     .card {
         word-wrap: break-word;
         background-clip: initial;

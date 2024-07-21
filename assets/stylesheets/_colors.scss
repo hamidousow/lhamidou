@@ -6,6 +6,7 @@
     --clr-orange: #F28157;
     --clr-black: #151515;
     --clr-grey-light: #f0f0f0;
+    --clr-white: #ffffff;
 }
 
 .color-green {
@@ -27,6 +28,10 @@
 
 .color-purple {
     color: var(--clr-purple);
+}
+
+.color-white {
+    color: var(--clr-white);
 }
 
 .background-black {
