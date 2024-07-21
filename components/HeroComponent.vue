@@ -40,10 +40,10 @@
                         </ul>
                     </div>
                     <div class="freelance-details pt-60 col-12 col-lg-6 order-3 order-lg-1 col">
-                        <p class="subtitle color-green">Hamidou SOW</p>
-                        <h1 class="fustat-hero-text color-grey-light" >Je suis 
-                            <span class="climate-crisis-special-word color-orange"> designer </span> et 
-                            <span class="pixelify-sans-special-word color-orange"> développeur </span> freelance basé à Tourcoing</h1>
+                        <p class="subtitle color-green">Hamidou S</p>
+                        <h1 class="hero-text color-grey-light" >Je suis 
+                            <span class="climate-crisis-regular-font color-orange"> designer </span> et 
+                            <span class="pixelify-regular-font color-orange"> développeur </span> freelance basé à Tourcoing</h1>
                         <ButtonComponent :to="'/contact'" > let’s work</ButtonComponent>
                     </div>
                 </div> 
@@ -67,30 +67,14 @@
     /* // <uniquifier>: Use a unique and descriptive class name */
     /* // <weight>: Use a value from 200 to 800 */
 
-    .fustat-hero-text {
-        font-family: "Fustat", sans-serif;
-        font-optical-sizing: auto;
-        font-size: clamp(1.7em, 28px, 3em);
-        font-weight: 600;
-        font-style: normal;
+    
+
+    h1 span {
+        font-size: 21px;
     }
 
-    /* */
-
-    .climate-crisis-special-word {
-        font-family: "Climate Crisis", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-size: 23px;
-        font-style: normal;
-        font-variation-settings: "YEAR" 1979;
-    }
-
-    .pixelify-sans-special-word {
-        font-family: "Pixelify Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
+    .hero-text {
+        font-size: clamp(19px, 2vw, 27px);
     }
     
 

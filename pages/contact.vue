@@ -15,7 +15,7 @@
   <div class="content-wrap">
     <div class="container pt-160 pb-160">
       <div class="mb-n8 row">
-        <div data-aos="fade-up" class="col-12 col-lg-10 col-xl-8 aos-init aos-animate">
+        <div class="col-12 col-lg-10 col-xl-8">
           <h1 class="h2 mt-15 pb-4 pb-sm-0">Besoin d'un <strong> logo </strong> unique et personnalisé ? D'un <strong> site vitrine </strong> fait sur mesure et SEO friendly ? </h1>
           <p> Envoyez-moi un message pour démarrer votre projet dès aujourd'hui ! </p>
           <ButtonComponent :to="`mailto:${decodedEmail}`"> Passez à l'action 🚀 </ButtonComponent>

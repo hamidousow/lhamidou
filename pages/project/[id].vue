@@ -31,11 +31,11 @@ import { useProjectStore } from '~/stores/projectStore';
                 <div class="pt-100 mt-n30 pb-130 mb-n10">
                     <div class="gh-1 row">
                         <div class="d-none d-xl-block col-1"></div>
-                        <div data-aos="fade-up" class="col-12 me-lg-auto me-xl-0 col-lg-5 col-xl-4 aos-init aos-animate">
+                        <div class="col-12 me-lg-auto me-xl-0 col-lg-5 col-xl-4">
                             <h1 class="project-title mb-100 mb-lg-0 pb-8 pb-lg-0">{{  project?.pro_name }}</h1>
                         </div>
                         <div class="d-none d-xl-block col-lg-2"></div>
-                        <div data-aos="fade-up" class="col-12 col-xl ms-xl-n30 col-lg-6 aos-init aos-animate">
+                        <div class="col-12 col-xl ms-xl-n30 col-lg-6">
                             <p class="lead mb-0">{{  project?.pro_description }}</p>
                             <hr>
                             <div class="gh-3 gv-1 d-flex flex-column">
@@ -117,9 +117,7 @@ import { useProjectStore } from '~/stores/projectStore';
             </Galleria>
             <div v-if="project?.pro_images" class="row">
                 <div
-                    class="gallery-item gallery-item-md aos-init col-md-12 px-0" 
-                    data-fancybox="gallery-1" 
-                    data-aos="fade">
+                    class="gallery-item gallery-item-md col-md-12 px-0">
                     <img 
                         :src="project?.pro_images[0]" 
                         alt="image name"
@@ -128,9 +126,7 @@ import { useProjectStore } from '~/stores/projectStore';
                 </div>
                 <template v-if="project?.pro_images.length > 1">
                     <div
-                        class="gallery-item gallery-item-md aos-init col-md-5 px-0" 
-                        data-fancybox="gallery-1" 
-                        data-aos="fade">
+                        class="gallery-item gallery-item-md col-md-5 px-0" >
                         <img 
                             :src="project?.pro_images[1]" 
                             alt="image name"
@@ -138,9 +134,7 @@ import { useProjectStore } from '~/stores/projectStore';
                         >
                     </div> 
                     <div
-                        class="gallery-item gallery-item-md aos-init col-md-7 px-0" 
-                        data-fancybox="gallery-1" 
-                        data-aos="fade">
+                        class="gallery-item gallery-item-md col-md-7 px-0" >
                         <img 
                             :src="project?.pro_images[2]" 
                             alt="image name"
