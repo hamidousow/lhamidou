@@ -19,7 +19,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="footer-copyright mb-5 color-white">© 2024 -2025 | L'Hamidou by <NuxtLink to="https://hamidousow.fr" class="color-green-flash">Hamidou
+            <div class="mb-5 color-white">© 2024 -2025 | L'Hamidou by <NuxtLink to="https://hamidousow.fr" class="color-green-flash">Hamidou
                 </NuxtLink>
             </div>
         </div>
