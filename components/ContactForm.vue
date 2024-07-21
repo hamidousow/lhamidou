@@ -2,23 +2,23 @@
   <div class="form-container col-12 mt-5 mt-lg-0 col-lg-8">
     <form method="POST" action="/contact" @submit.prevent="sendForm()">
         <div class="gh-1 gv-2 row">
-        <div data-aos="fade-up" class="col-12 col-md-6 aos-init aos-animate">
+        <div class="col-12 col-md-6">
             <input placeholder="Your Name *" type="name" class="form-control form-control" v-model="name">
         </div>
-        <div data-aos="fade-up" class="col-12 col-md-6 aos-init aos-animate">
+        <div class="col-12 col-md-6">
             <input placeholder="Your Email *" name="email" type="email" class="form-control form-control" v-model="email">
         </div>
-        <div data-aos="fade-up" class="col-12 col-md-6 aos-init aos-animate">
+        <div class="col-12 col-md-6">
             <input placeholder="Company" type="company" class="form-control form-control">
         </div>
-        <div data-aos="fade-up" class="col-12 col-md-6 aos-init aos-animate" >
+        <div class="col-12 col-md-6" >
             <select class="form-control" v-model="typeProject">
             <option>Type of Project</option>
             <option>Colibri Creative Project</option>
             <option>Colibri Project</option>
             </select>
         </div>
-        <div data-aos="fade-up" class="col-12 col-md-6 aos-init aos-animate">
+        <div class="col-12 col-md-6">
             <select class="form-control" v-model="budget">
             <option>Your Budget</option>
             <option>&lt; 10 000</option>
@@ -27,13 +27,13 @@
             <option>&gt; 30 000</option>
             </select>
         </div>
-        <div data-aos="fade-up" class="col-12 col aos-init aos-animate">
+        <div class="col-12 col">
             <input placeholder="Title" type="text" class="form-control form-control">
         </div>
-        <div data-aos="fade-up" class="col-12 col aos-init aos-animate">
+        <div class="col-12 col">
             <textarea class="form-control" rows="1" placeholder="Message *"></textarea>
         </div>
-        <div data-aos="fade-up" class="col-12 col aos-init">
+        <div class="col-12 col aos-init">
             <button class="btn btn-dark btn-with-ball mt-20" name="button">submit</button>
         </div>
         </div>

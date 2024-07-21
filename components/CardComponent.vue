@@ -13,9 +13,7 @@
                 <span class="card-img rounded-0">
                     <img 
                         :src="props.project?.pro_cover" 
-                        alt="" 
-                        data-aos="fade-up"
-                        class="aos-init aos-animate">
+                        alt="">
                 </span>
                 <span class="card-body">
                     <span class="card-title h4">{{ props.project?.pro_name }}</span>

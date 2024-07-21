@@ -19,7 +19,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="footer-copyright mb-5 color-white">© 2024 -2025 | L'Hamidou by <NuxtLink to="https://hamidousow.fr" class="color-white">Hamidou
+            <div class="footer-copyright mb-5 color-white">© 2024 -2025 | L'Hamidou by <NuxtLink to="https://hamidousow.fr" class="color-green-flash">Hamidou
                 </NuxtLink>
             </div>
         </div>
@@ -42,6 +42,10 @@
     .footer-copyright {
         color: #969696;
         font-size: .875em;
+    }
+
+    a svg {
+        fill: var(--clr-white);
     }
 
 </style>
