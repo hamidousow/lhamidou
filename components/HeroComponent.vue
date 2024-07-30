@@ -11,7 +11,7 @@
                     <div class="col-auto order-1 order-lg-3 col ps-30 pt-60">
                         <div class="shape-parent lines-style-2">
                             <div class="line text-dark"></div>
-                            <div class="container-avatar rounded-circle">
+                            <!-- <div class="container-avatar rounded-circle">
                                 <img 
                                     class="position-relative"
                                     src="~/assets/images/avatar-freelancer.jpg" 
@@ -19,7 +19,7 @@
                                     width="100%"
                                     
                                 >
-                            </div>
+                            </div> -->
                         </div>
                     </div>  
                     <div class="d-none d-lg-block col order-lg-2"></div>                   

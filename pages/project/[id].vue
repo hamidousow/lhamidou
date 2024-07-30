@@ -115,7 +115,7 @@ import { useProjectStore } from '~/stores/projectStore';
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
                 </template>
             </Galleria>
-            <div v-if="project?.pro_images" class="row">
+            <div v-if="project?.pro_images" class="row ps-2 pe-2">
                 <div
                     class="gallery-item gallery-item-md col-md-12 px-0">
                     <img 

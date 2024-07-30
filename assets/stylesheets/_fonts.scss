@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Pixelify Sans", sans-serif;
+    src: url(../fonts/PixelifySans-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Climate Crisis", sans-serif;
+    src: url(../fonts/ClimateCrisis-Regular.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fustat", sans-serif;
+    src: url(../fonts/Fustat-Regular.ttf);
+    font-display: swap;
+}
+
+.climate-crisis-regular-font {
+    font-family: "Climate Crisis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "YEAR" 1979;
+}
+
+.pixelify-regular-font {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fustat-regular-font {
+    font-family: "Fustat", "sans-serif";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
