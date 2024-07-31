@@ -7,7 +7,7 @@
 </script>
 
 <template>
-    <nav class="navbar position-fixed start-0 end-0 bg-body-tertiary">
+    <nav class="navbar position-fixed start-0 end-0 background-grey-light">
         <div class="container">
             <NuxtLink class="navbar-brand climate-crisis-navbar-brand" to="/">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 975.93 98.21">

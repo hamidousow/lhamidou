@@ -65,7 +65,7 @@ import { useProjectStore } from '~/stores/projectStore';
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container">
             <Galleria 
                 v-model:activeIndex="activeIndex" 
                 v-model:visible="displayCustom" 
