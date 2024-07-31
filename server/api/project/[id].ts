@@ -14,7 +14,7 @@ export default defineEventHandler( async (event) => {
     //todo: use netlify blobs 
     const {data, error} = await supabaseClient    
     .from('t_project')
-    .select('pro_name, pro_description, pro_client, pro_category, pro_images')
+    .select('pro_name, pro_description, pro_client, pro_category, pro_images, pro_link')
     .eq('pro_id', id)
     .single()
 

@@ -8,6 +8,7 @@ export class Project {
     private cover!: string;
     private hasNext!: boolean;
     private hasPrevious!: boolean;
+    private link!: string;
 
     public Project(id: number, name: string, description: string, client:string, category:string[], images: string[]) {
         this.id = id;
@@ -82,5 +83,13 @@ export class Project {
 
     public getHasPrevious() : boolean {
         return this.hasPrevious;
+    }
+
+    private setLink(link: string) {
+        this.link = link;
+    }
+
+    private getLink() : string {
+        return this.link;
     }
 }

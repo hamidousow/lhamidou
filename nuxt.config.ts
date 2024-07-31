@@ -12,7 +12,12 @@ export default defineNuxtConfig({
   fonts: {
     defaults: {
       weights: [400],
-      styles: ["normal"]
+      styles: ["normal"],
+      subsets: [
+        'latin-ext',
+        'latin'
+      ]
+
     },
     families: [
       {name: "Climate Crisis", provider: "google"},

@@ -44,18 +44,20 @@ import { useProjectStore } from '~/stores/projectStore';
                                         <!-- <li class="list-group-item">
                                             <span class="fw-medium me-8">Date:</span> June 10, 2020
                                         </li> -->
-                                        <li class="list-group-item">
-                                            <span class="fw-medium me-8">Category : </span> 
-                                            <span v-for="category, index in project?.pro_category" :key="index" class="category me-1">{{  category + ' ' }}</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-12 col-lg-auto col-sm-6">
-                                    <ul class="list-group-gap borderless ps-0">
-                                        <li class="list-group-item">
+                                        <li class="list-group-item  mb-2">
                                             <span class="fw-medium me-8">Client: </span> 
                                             {{  project?.pro_client }}
-                                        </li>                                        
+                                        </li> 
+                                        <li class="list-group-item  mb-2">
+                                            <span class="fw-medium me-8">Category : </span> 
+                                            <span v-for="category, index in project?.pro_category" :key="index" class="category me-1">{{  category + ' ' }}</span>
+                                        </li> 
+                                        <template v-if="project?.pro_link">
+                                            <li class="list-group-item  mb-2">
+                                                <span class="fw-medium me-8">Voir le projet en ligne : </span> 
+                                                <a :href="project.pro_link" target="_blank" class="me-1">{{  project.pro_link }}</a>
+                                            </li>
+                                        </template>                                     
                                     </ul>
                                 </div>
                             </div>
