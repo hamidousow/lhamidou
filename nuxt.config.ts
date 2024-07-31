@@ -7,8 +7,19 @@ export default defineNuxtConfig({
     "@nuxt/eslint", 
     "@pinia/nuxt",
     "nuxt-primevue",
-    
+    "@nuxt/fonts"
   ], 
+  fonts: {
+    defaults: {
+      weights: [400],
+      styles: ["normal"]
+    },
+    families: [
+      {name: "Climate Crisis", provider: "google"},
+      {name: "Pixelify Sans", provider: "google"},
+      {name: "Fustat", provider: "google"},
+    ]
+  },
   primevue: {
       /* Option */
   },

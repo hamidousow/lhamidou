@@ -46,13 +46,15 @@ import { useProjectStore } from '~/stores/projectStore';
                                         </li> -->
                                         <li class="list-group-item">
                                             <span class="fw-medium me-8">Category : </span> 
-                                            <span v-for="category, index in project?.pro_category" :key="index">{{  category }}</span>
+                                            <span v-for="category, index in project?.pro_category" :key="index" class="category me-1">{{  category + ' ' }}</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col-12 col-lg-auto col-sm-6">
                                     <ul class="list-group-gap borderless">
-                                        <li class="list-group-item"><span class="fw-medium me-8">Client: </span> {{  project?.pro_client }}
+                                        <li class="list-group-item">
+                                            <span class="fw-medium me-8">Client: </span> 
+                                            {{  project?.pro_client }}
                                         </li>
                                         <li class="list-group-item"><span class="fw-medium">Share: </span>
                                             <ul class="nav nav-gap-sm align-items-center d-inline-flex ms-4">
@@ -115,33 +117,15 @@ import { useProjectStore } from '~/stores/projectStore';
                     <img :src="slotProps.item.thumbnailImageSrc" :alt="slotProps.item.alt" style="display: block" />
                 </template>
             </Galleria>
-            <div v-if="project?.pro_images" class="row ps-2 pe-2">
-                <div
-                    class="gallery-item gallery-item-md col-md-12 px-0">
+            <div class="row ps-2 pe-2">
+                <div v-for="image, index in project?.pro_images" :key="index"
+                    class="gallery-item gallery-item-md col-md-6 px-0">
                     <img 
-                        :src="project?.pro_images[0]" 
+                        :src="image" 
                         alt="image name"
-                        @click="imageClick(0)"
+                        @click="imageClick(index)"
                     >
                 </div>
-                <template v-if="project?.pro_images.length > 1">
-                    <div
-                        class="gallery-item gallery-item-md col-md-5 px-0" >
-                        <img 
-                            :src="project?.pro_images[1]" 
-                            alt="image name"
-                            @click="imageClick(1)"
-                        >
-                    </div> 
-                    <div
-                        class="gallery-item gallery-item-md col-md-7 px-0" >
-                        <img 
-                            :src="project?.pro_images[2]" 
-                            alt="image name"
-                            @click="imageClick(2)"
-                        >
-                    </div> 
-                </template>
             </div>
         </div>
         <div class="pt-160 pb-130 shape-parent overflow-hidden">
@@ -182,10 +166,6 @@ import { useProjectStore } from '~/stores/projectStore';
         text-transform: uppercase;
     }
 
-    .gallery-item:first-child {
-        height: 700px;
-    }
-
     .gallery-item {
         height: 500px;
     }
@@ -197,12 +177,19 @@ import { useProjectStore } from '~/stores/projectStore';
         cursor: pointer;
     }
 
+    .category {
+        padding: 3px 7px;
+        color: var(--clr-black);
+        border: 1px solid var(--clr-black);
+        background-color: transparent;
+        text-align: center;
+        border-radius: 3px;
+    }
+
     @media screen and (max-width:765px) {
 
         .gallery-item, .gallery-item:first-child  {
             height: 220px;
-            /* padding: 10px; */
-
         }
     }
 

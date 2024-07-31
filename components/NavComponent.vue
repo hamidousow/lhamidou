@@ -45,7 +45,7 @@
                 <ul class="menu my-0">                   
                     <li class="menu-item">
                         <NuxtLink 
-                            class="menu-item-link" 
+                            class="menu-item-link climate-crisis-regular-font" 
                             aria-current="page" 
                             to="/projects"  
                             @click="isActive = !isActive"
